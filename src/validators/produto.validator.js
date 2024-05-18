@@ -7,12 +7,12 @@ export  const ProdutoValidator = [
 ]
 
 export const ProdutoUpdateValidator = [
-    param ('id').isInt().withMessage(`ID é obrigatório!`), 
+    param ('id').isInt().withMessage(`ID inválido!`), 
     body('nome').isString().withMessage(`Nome é obrigatório!`),
     body('preco').isNumeric().withMessage(`Preço é obrigatório!`),
     body('descricao').isString().withMessage(`Descrição é obrigatório!`)
 ]
 
 export const ProdutoIdValidator = [
-    param ('id').isInt().withMessage(`ID é obrigatório!`)
+    param ('id').isInt().withMessage(`ID inválido!`)
 ]
