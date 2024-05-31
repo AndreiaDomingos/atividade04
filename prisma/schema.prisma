@@ -18,13 +18,14 @@ model Produto {
   nome String
   preco Float
   descricao String
-  imagem Imagem []
+  fotos Foto []
   }
 
-model Imagem{
+model Foto {
   id Int @id @default(autoincrement())
-  title String
+  titulo String
   url String?
   produtoId Int
   produto Produto @relation(fields: [produtoId], references: [id])
-}
+  }
+

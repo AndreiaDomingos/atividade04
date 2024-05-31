@@ -1,10 +1,10 @@
 import { validationResult } from 'express-validator'
-import Imagem from '../models/imagem.model.js'
+import Foto from '../models/foto.model.js'
 
-export default class ImagemController {
+export default class FotoController {
     static async index(req, res) {
-        const imagem = await Imagem.findMany()
-        res.json(imagem)
+        const fotos = await Foto.findMany()
+        res.json(fotos)
     }
 
     static async create(req, res) {
@@ -13,12 +13,12 @@ export default class ImagemController {
         return res.status(400).json({ erros: erros.array() })
         }
     
-        const imagem = await Imagem.create({
+        const foto = await Foto.create({
           data: req.body
         })
     
-        res.json(imagem)
+        res.json(foto)
       }
-
+      
 }
 
